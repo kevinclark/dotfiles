@@ -1,0 +1,24 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[user]
+	name = Kevin Clark
+	email = kevin.clark@gmail.com
+
+[alias]
+	a = add
+	b = branch
+	c = commit
+	d = diff
+	f = fetch
+	g = grep
+	p = pull
+	rb = rebase
+	rs = reset
+	s = status
+	sh = show
+	st = stash
+	l = log
+	h = help
+
