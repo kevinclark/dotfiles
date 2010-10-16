@@ -1,4 +1,5 @@
 *
-!.emacs.d/*
-!.emacs
 !.gitconfig
+!.vimrc
+!.vim
+!.vim/*
