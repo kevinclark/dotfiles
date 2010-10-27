@@ -23,7 +23,7 @@ set tags=tags,$inetroot\private\tags
 nmap <C-t>l :TlistToggle<CR>
 
 " Ignoring log files
-let g:fuzzy_ignore = "*.log,*.bak,*.obj,*.csv"
+let g:fuzzy_ignore = "*.log;*.bak;*.obj;*.csv;*.pyc"
 " Use this to tweak how many matches you can get
 let g:fuzzy_matching_limit = 70
 let g:fuzzy_ceiling = 20000
