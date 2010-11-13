@@ -6,7 +6,7 @@ alias la='ls -a'
 alias ll='ls -alF'
 
 export EDITOR='mvim -f'
-export PATH="/Users/kev/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH"
+export PATH="/Users/kevinc/bin:/Users/kev/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH"
 
 export P4CONFIG=.p4config
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
