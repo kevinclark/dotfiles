@@ -17,23 +17,12 @@ colorscheme twilight
 set gfn=Lucida_Sans_Typewriter:h10:cANSI
 
 " Tags
-set tags=tags,$inetroot\private\tags
+set tags=tags
 
 " Turning on and off tags list
 nmap <C-t>l :TlistToggle<CR>
 
-" Ignoring log files
-let g:fuzzy_ignore = "*.log;*.bak;*.obj;*.csv;*.pyc"
-" Use this to tweak how many matches you can get
-let g:fuzzy_matching_limit = 70
-let g:fuzzy_ceiling = 20000
-
-map <leader>t :FuzzyFinderTextMate<CR>
-map <leader>f :FuzzyFinderFile<CR>
-map <leader>b :FuzzyFinderBuffer<CR>
-
 map <leader>d :NERDTreeToggle<CR>
-
 
 " Snippets
 nmap <C-i>t i// TODO(kecla): 
@@ -45,7 +34,7 @@ let g:clj_highlight_builtins=1
 let g:clj_paren_rainbow=1
 
 " Settings for Python
-autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim
 
 " Tags
 let g:ctags_statusline=1
