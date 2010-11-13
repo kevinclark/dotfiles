@@ -2,6 +2,8 @@ alias g='git'
 alias go='git checkout'
 alias irc='ssh glu.ttono.us'
 alias clj='java jline.ConsoleRunner clojure.main'
+alias la='ls -a'
+alias ll='ls -alF'
 
 export EDITOR='mvim -f'
 export PATH="/Users/kev/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin:$PATH"
