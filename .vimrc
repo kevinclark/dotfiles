@@ -2,6 +2,8 @@ syntax on
 
 " Incremental search
 set incsearch
+set ignorecase
+set hlsearch
 
 set tabstop=4
 set smarttab
@@ -10,6 +12,7 @@ set autoindent
 set expandtab
 set backspace=start,indent
 set number
+set ruler
 
 colorscheme twilight
 
@@ -45,4 +48,5 @@ let TList_Use_Compact_Format=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_GainFocus_On_ToggleOpen=1
 let Tlist_File_Fold_Auto_Close=1
+let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 
