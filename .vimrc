@@ -29,6 +29,7 @@ map <leader>d :NERDTreeToggle<CR>
 
 " Snippets
 nmap <C-i>t i// TODO(kecla): 
+nmap <C-p> iimport pdb; pdb.set_trace()
 
 " Settings for VimClojure
 set nocompatible
