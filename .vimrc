@@ -5,6 +5,7 @@ set incsearch
 set ignorecase
 set hlsearch
 
+
 set tabstop=4
 set smarttab
 set shiftwidth=4
@@ -13,6 +14,8 @@ set expandtab
 set backspace=start,indent
 set number
 set ruler
+" invisibles
+set list
 
 colorscheme twilight
 

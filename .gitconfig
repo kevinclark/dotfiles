@@ -21,6 +21,7 @@
 	st = stash
 	l = log
 	h = help
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
 [core]
 	excludesfile = /var/greplin/src/tools/gitConfig/gitignore
