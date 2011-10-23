@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/private/var/greplin/src/tools'
+let g:netrw_dirhist_2='/private/var/greplin/src/tools/happiness'
+let g:netrw_dirhist_3='/private/var/greplin/src/indexing'
+let g:netrw_dirhist_4='/private/var/greplin/src/tools'
+let g:netrw_dirhist_5='/private/var/greplin/src/indexing'
+let g:netrw_dirhist_6='/private/var/greplin/src/garden/constants/src/greplin'
+let g:netrw_dirhist_7='/private/var/greplin/src/indexing'
+let g:netrw_dirhist_8='/private/var/greplin/src/tools'
+let g:netrw_dirhist_9='/private/var/greplin/src/indexing'
