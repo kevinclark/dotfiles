@@ -1,23 +1,12 @@
 alias g='git'
 alias go='git checkout'
 alias irc='ssh glu.ttono.us'
-alias clj='java jline.ConsoleRunner clojure.main'
 alias la='ls -a'
 alias ll='ls -alF'
 alias gbs='for d in `ls`; do test -d $d && echo $d && cd $d && g b && echo && cd ..; done'
-alias autotest='~/code/modipyd/bin/pyautotest 2>&1 | rg'
 
 export EDITOR='mvim -f'
-export PATH="/Users/$(whoami)/bin:$PATH:/usr/local/bin:/opt/local/bin:/opt/local/sbin:/opt/local/lib/postgresql83/bin"
-
-export P4CONFIG=.p4config
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
-export CLASSPATH="/Users/kev/code/jars/*:/opt/jars/*"
-export OOC_DIST=/Users/kev/code/ooc
-
-# Initialize the 'hop' script
-source /Users/$(whoami)/twisted_env/bin/../hop/hop.bash
-
+export PATH="$PATH:~/bin"
 
         RED="\[\033[0;31m\]"
      YELLOW="\[\033[0;33m\]"
