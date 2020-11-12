@@ -29,3 +29,8 @@ for f in `ls zsh`; do
   ln -vsf $ROOT/zsh/$f ~/.$f
 done
 
+
+# Place actual dotfiles
+for f in `ls dotfiles`; do
+  ln -vsf $ROOT/dotfiles/$f ~/.$f
+done

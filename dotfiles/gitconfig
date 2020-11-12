@@ -2,6 +2,7 @@
 	diff = auto
 	status = auto
 	branch = auto
+
 [user]
 	name = Kevin Clark
 	email = kevin.clark@gmail.com
