@@ -29,6 +29,8 @@ for name gh in $plugins; do
   fi
 done
 
+# tmux - grab tpm!
+
 
 # Place actual dotfiles
 for f in `ls dotfiles`; do
