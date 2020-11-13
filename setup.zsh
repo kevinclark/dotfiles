@@ -4,6 +4,9 @@ set -e
 
 ROOT=${0:a:h}
 
+# Install packages
+brew bundle --file $ROOT/Brewfile
+
 # ZSH install
 
 if ! [[ -d ~/.oh-my-zsh ]]; then
@@ -34,5 +37,5 @@ done
 
 # Place actual dotfiles
 for f in `ls dotfiles`; do
-  ln -vsf $ROOT/dotfiles/$f ~/.$f
+  ln -vsfn $ROOT/dotfiles/$f ~/.$f
 done
