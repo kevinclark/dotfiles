@@ -31,10 +31,6 @@ set termguicolors
 colorscheme solarized8
 set background=dark
 
-" Show the 'line too long' column
-highlight ColorColumn ctermbg=DarkBlue
-set colorcolumn=120
-
 " Set leader
 nnoremap <SPACE> <Nop>
 let mapleader = ' '
