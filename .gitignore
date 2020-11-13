@@ -1,0 +1,4 @@
+dotfiles/config/coc/extensions/
+dotfiles/config/tmux/plugins/
+dotfiles/config/nvim/.netrwhist
+
