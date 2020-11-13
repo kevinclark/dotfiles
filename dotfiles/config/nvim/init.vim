@@ -31,9 +31,15 @@ set termguicolors
 colorscheme solarized8
 set background=dark
 
+" Show the 'line too long' column
+highlight ColorColumn ctermbg=DarkBlue
+set colorcolumn=120
+
+" Set leader
 nnoremap <SPACE> <Nop>
 let mapleader = ' '
 
+" For git gutter
 set signcolumn=yes
 
 set number relativenumber ruler
@@ -48,6 +54,7 @@ set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
 set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
+set showmatch                     " Show matching parens
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
 " List chars
@@ -59,19 +66,15 @@ set listchars+=extends:>          " The character to show in the last column whe
 set listchars+=precedes:<         " The character to show in the last column when wrap is
                                   " off and the line continues beyond the left of the screen
 
-""
-"" Searching
-""
-
+" Searching
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
 set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
-"""
-""" Bindings
-"""
 
+
+" Bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
