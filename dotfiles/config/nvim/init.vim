@@ -18,6 +18,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'vim-test/vim-test'
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
@@ -108,4 +110,13 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+
+" vim-test
+let test#strategy = "dispatch"
+
+nmap <leader>tn :TestNearest<CR>
+nmap <leader>tf :TestFile<CR>
+nmap <leader>ts :TestSuite<CR>
+nmap <leader>tl :TestLast<CR>
+nmap <leader>tg :TestVisit<CR>
 
