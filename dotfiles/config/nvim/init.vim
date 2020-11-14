@@ -21,6 +21,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-unimpaired'
 
 call plug#end()
 
