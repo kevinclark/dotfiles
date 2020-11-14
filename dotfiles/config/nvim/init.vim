@@ -16,6 +16,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -75,6 +77,9 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ez :split ~/.zshrc<CR>
+nnoremap <leader>fl :Lines<CR>
+nnoremap <leader><leader> :GFiles<CR>
+
 
 " NERDCommenter
 let g:NERDCreateDefaultMappings = 0
