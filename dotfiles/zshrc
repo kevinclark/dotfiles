@@ -73,7 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
-ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOSTART=false
 
 # Otherwise autojump complains
 unsetopt BG_NICE
