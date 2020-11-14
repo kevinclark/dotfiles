@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 
@@ -110,6 +111,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ }
+
+" Rust
+let g:rustfmt_autosave = 1
 
 " vim-test
 let test#strategy = "dispatch"
