@@ -101,9 +101,13 @@ ctrl - return : kitty --single-instance -d ~ &> /dev/null
 # shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 
 # create desktop, move window and follow focus - uses jq for parsing json (brew install jq)
-ctrl + cmd - n : yabai -m space --create && \
+ctrl + alt - n : yabai -m space --create && \
                    index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                    yabai -m window --space "${index}" && \
+                   yabai -m space --focus "${index}"
+
+ctrl + cmd - n : yabai -m space --create && \
+                   index="$(yabai -m query --spaces --display | jq 'map(select(."native-fullscreen" == 0))[-1].index')" && \
                    yabai -m space --focus "${index}"
 
 # destroy space
