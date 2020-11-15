@@ -22,6 +22,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -115,6 +116,7 @@ let g:lightline = {
 
 " Rust
 let g:rustfmt_autosave = 1
+let g:ale_linters = {'rust': ['analyzer']}
 
 " vim-test
 let test#strategy = "dispatch"

@@ -12,6 +12,7 @@ cask "1password-cli"
 # general dev
 brew "neovim"
 brew "qcachegrind"
+brew "rust-analyzer"
 
 # wm
 brew "yabai"
