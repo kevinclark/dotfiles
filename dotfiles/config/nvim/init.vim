@@ -23,6 +23,7 @@ Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
 Plug 'dense-analysis/ale'
+Plug 'dhruvasagar/vim-zoom'
 
 call plug#end()
 
