@@ -1,3 +1,16 @@
+let g:ale_linters = {'rust': ['analyzer', 'cargo']}
+let g:rustfmt_autosave = 1
+
+let g:ale_rust_cargo_use_clippy = 1
+let g:ale_rust_cargo_check_tests = 1
+let g:ale_rust_cargo_use_check = 1
+let g:ale_disable_lsp = 1
+
+let g:ale_sign_error = '❌'
+let g:ale_sign_style_error = '⁉️'
+let g:ale_sign_warning = '⚠️'
+let g:ale_sign_style_warning = '💩'
+
 """
 """ Plugins
 """
@@ -17,7 +30,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'rust-lang/rust.vim'
 Plug 'vim-test/vim-test'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
@@ -108,6 +120,9 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 nmap <leader>rn <Plug>(coc-rename)
 
+" Fold whole file
+command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
 " Remap <C-f> and <C-b> for scroll float windows/popups.
 " Note coc#float#scroll works on neovim >= 0.4.0 or vim >= 8.2.0750
 nnoremap <nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -131,7 +146,10 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'curentfunction', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'cocstatus', 'curentfunction', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'vim-zoom' ]]
       \ },
       \ 'component': {
       \   'vim-zoom': '%{zoom#statusline()}'
@@ -145,18 +163,9 @@ let g:lightline = {
 autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " Rust
-let g:rustfmt_autosave = 1
-" let g:ale_linters = {'rust': ['analyzer', 'cargo']}
-let g:ale_rust_cargo_use_clippy = 1
-let g:ale_rust_cargo_check_tests = 1
-let g:ale_rust_cargo_use_check = 1
 
-
-let g:ale_sign_error = '❌'
-let g:ale_sign_style_error = '⁉️'
-let g:ale_sign_warning = '⚠️'
-let g:ale_sign_style_warning = '💩'
-
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
 " vim-test
 let test#strategy = "dispatch"

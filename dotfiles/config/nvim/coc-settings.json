@@ -5,7 +5,8 @@
   "python.linting.flake8Enabled": false,
   "python.linting.pylintPath": "/usr/local/bin/pylint",
 
-  "rust.clippy_preference": "on",
+  "diagnostic.displayByAle": true,
+
   "diagnostic.errorSign": "❌",
   "diagnostic.warningSign": "⚠️"
 }
