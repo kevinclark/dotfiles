@@ -3,6 +3,9 @@
   "python.jediPath": "/usr/local/lib/python3.9/site-packages/",
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": false,
-  "python.linting.pylintPath": "/usr/local/bin/pylint"
+  "python.linting.pylintPath": "/usr/local/bin/pylint",
 
+  "rust.clippy_preference": "on",
+  "diagnostic.errorSign": "❌",
+  "diagnostic.warningSign": "⚠️"
 }
