@@ -11,6 +11,13 @@ let g:ale_sign_style_error = '⁉️'
 let g:ale_sign_warning = '⚠️'
 let g:ale_sign_style_warning = '💩'
 
+let g:lightline#ale#indicator_checking = '⏳'
+let g:lightline#ale#indicator_infos = 'ℹ'
+let g:lightline#ale#indicator_warnings = '⚠️'
+let g:lightline#ale#indicator_errors = '❌'
+let g:lightline#ale#indicator_ok = '✔️'
+
+
 """
 """ Plugins
 """
@@ -18,23 +25,33 @@ let g:ale_sign_style_warning = '💩'
 call plug#begin('~/.vim/plugged')
 
 Plug 'lifepillar/vim-solarized8'
+
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'edkolev/tmuxline.vim'
+
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'sheerun/vim-polyglot'
+
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 Plug 'ntpeters/vim-better-whitespace'
+
 Plug 'itchyny/lightline.vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim'
+Plug 'maximbaz/lightline-ale'
+
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+
 Plug 'vim-test/vim-test'
+Plug 'dhruvasagar/vim-zoom'
+
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-surround'
+
+Plug 'neoclide/coc.nvim'
 Plug 'dense-analysis/ale'
-Plug 'dhruvasagar/vim-zoom'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -95,6 +112,7 @@ nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ez :split ~/.zshrc<CR>
 nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>fi :Files<CR>
 nnoremap <leader><leader> :GFiles<CR>
 
 
@@ -146,13 +164,23 @@ let g:lightline = {
       \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'curentfunction', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'cocstatus', 'curentfunction',
+      \               'linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok',
+      \               'readonly', 'filename', 'modified' ] ],
       \   'right': [ [ 'lineinfo' ],
       \              [ 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype', 'vim-zoom' ]]
+      \              [ 'fileformat', 'fileencoding', 'filetype', 'vim-zoom',
+      \                ]]
       \ },
       \ 'component': {
       \   'vim-zoom': '%{zoom#statusline()}'
+      \ },
+      \ 'component_expand': {
+      \   'linter_checking': 'lightline#ale#checking',
+      \   'linter_infos': 'lightline#ale#infos',
+      \   'linter_warnings': 'lightline#ale#warnings',
+      \   'linter_errors': 'lightline#ale#errors',
+      \   'linter_ok': 'lightline#ale#ok',
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
