@@ -36,6 +36,6 @@ done
 
 
 # Place actual dotfiles
-for f in `ls dotfiles`; do
+for f in `ls $ROOT/dotfiles`; do
   ln -vsfn $ROOT/dotfiles/$f ~/.$f
 done
