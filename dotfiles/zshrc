@@ -86,7 +86,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump cargo direnv docker fzf git op tmux ssh-agent vi-mode zsh-syntax-highlighting zsh_reload)
+plugins=(autojump cargo direnv docker fzf git op tmux ssh-agent zsh-syntax-highlighting zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # fi
 #
 export EDITOR='nvim'
+export LC_ALL=en_US.UTF-8
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -129,9 +130,7 @@ alias ls='gls --color'
 alias la='ls -a'
 alias ll='ls -alF'
 alias vim='nvim'
-
-# Command that opens a tmux session with skhdrc/yabairc and tails log files
-# tail -f /usr/local/var/log/skhd/skhd.*.log /usr/local/var/log/yabai/yabai.*.log
+alias view='nvim -m'
 
 # Only autocomplete targets from make
 zstyle ':completion:*:*:make:*' tag-order 'targets'
