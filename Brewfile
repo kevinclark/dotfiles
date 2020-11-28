@@ -14,6 +14,9 @@ brew "neovim"
 brew "qcachegrind"
 brew "rust-analyzer"
 
+brew "vint"
+brew "shellcheck"
+
 # wm
 brew "yabai"
 brew "skhd"
