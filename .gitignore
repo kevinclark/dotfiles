@@ -1,4 +1,6 @@
 dotfiles/config/coc/extensions/
+dotfiles/config/coc/list-*.json
+dotfiles/config/coc/lists
 dotfiles/config/tmux/plugins/
 dotfiles/config/nvim/.netrwhist
 Brewfile.lock.json
