@@ -86,7 +86,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump cargo direnv docker fzf git op tmux ssh-agent zsh-syntax-highlighting zsh_reload)
+plugins=(autojump cargo direnv docker fzf fzf-tab git op tmux ssh-agent zsh-syntax-highlighting zsh_reload)
 
 source $ZSH/oh-my-zsh.sh
 

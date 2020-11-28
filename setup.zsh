@@ -23,6 +23,7 @@ fi
 plugins=(
   zsh-syntax-highlighting zsh-users/zsh-syntax-highlighting
   op sirhc/op.plugin.zsh
+  fzf-tab Aloxaf/fzf-tab
 )
 
 for name gh in $plugins; do
