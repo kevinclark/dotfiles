@@ -6,6 +6,7 @@ brew "direnv"
 brew "coreutils" # For gls
 brew "httpie"
 brew "jq"
+brew "exa"
 
 cask "1password-cli"
 

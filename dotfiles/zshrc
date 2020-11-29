@@ -134,7 +134,20 @@ alias view='nvim -m'
 
 # Only autocomplete targets from make
 zstyle ':completion:*:*:make:*' tag-order 'targets'
+# Use colors
 zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
+
+# Use a preview window + exa for file completion
+previewing_commands=(
+  cd
+  gls
+  nvim
+  exa
+)
+
+for command in $previewing_commands; do
+  zstyle ":fzf-tab:complete:$command:*" fzf-preview 'exa -1 --color=always $realpath'
+done
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
