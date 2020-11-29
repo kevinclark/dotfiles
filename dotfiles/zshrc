@@ -75,6 +75,13 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_TMUX_CONFIG=~/.config/tmux/tmux.conf
 ZSH_TMUX_AUTOSTART=false
 
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+if (( ! ${fpath[(I)/usr/local/share/zsh-completions]} )); then
+  FPATH=/usr/local/share/zsh-completions:$FPATH
+fi
+
 # Otherwise autojump complains
 unsetopt BG_NICE
 
