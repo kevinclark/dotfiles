@@ -7,6 +7,7 @@ brew "coreutils" # For gls
 brew "httpie"
 brew "jq"
 brew "exa"
+brew "fd"
 
 cask "1password-cli"
 
@@ -14,9 +15,13 @@ cask "1password-cli"
 brew "neovim"
 brew "qcachegrind"
 brew "rust-analyzer"
+brew "ninja"
 
 brew "vint"
 brew "shellcheck"
+
+tap "universal-ctags/universal-ctags"
+brew "universal-ctags", args: ['HEAD']
 
 # wm
 brew "yabai"
