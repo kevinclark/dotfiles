@@ -14,8 +14,13 @@ cask "1password-cli"
 # general dev
 brew "neovim"
 brew "qcachegrind"
+tap "LouisBrunner/valgrind"
+brew "valgrind", args: ['HEAD']
 brew "rust-analyzer"
+brew "ccls"
 brew "ninja"
+brew "hyperfine"
+brew "lsusb"
 
 brew "vint"
 brew "shellcheck"
