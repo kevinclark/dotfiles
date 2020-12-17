@@ -1,15 +1,23 @@
-let g:ale_linters = {'rust': ['analyzer', 'cargo']}
+scriptencoding utf-8
+
+let g:ale_linters = {'rust': ['analyzer'], 'vim': ['vint']}
 let g:rustfmt_autosave = 1
+let g:rustfmt_options = '--config max_width=80'
 
 let g:ale_rust_cargo_use_clippy = 1
 let g:ale_rust_cargo_check_tests = 1
 let g:ale_rust_cargo_use_check = 1
 let g:ale_disable_lsp = 1
 
-let g:ale_sign_error = '❌'
-let g:ale_sign_style_error = '⁉️'
-let g:ale_sign_warning = '⚠️'
-let g:ale_sign_style_warning = '💩'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+
+let g:ale_floating_preview = 1
+let g:ale_hover_to_preview = 0
+let g:ale_hover_to_floating_preview = 0
+let g:ale_detail_to_floating_preview = 0
+let g:ale_close_preview_on_insert = 0
+let g:ale_cursor_detail = 0
 
 let g:lightline#ale#indicator_checking = '⏳'
 let g:lightline#ale#indicator_infos = 'ℹ'
@@ -50,7 +58,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
 Plug 'neoclide/coc.nvim'
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', { 'dir': '~/code/ale' }
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
@@ -59,7 +67,6 @@ call plug#end()
 """ General settings
 """
 
-set nocompatible
 syntax on
 filetype plugin indent on
 
@@ -109,11 +116,24 @@ set smartcase   " ... unless they contain at least one capital letter
 " Bindings
 nnoremap <leader>t :NERDTreeToggle<CR>
 nnoremap <leader>ev :split $MYVIMRC<CR>
+nnoremap <leader>esv :vsplit $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>ez :split ~/.zshrc<CR>
 nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>fi :Files<CR>
 nnoremap <leader><leader> :GFiles<CR>
+
+" " Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
 
 
 " NERDCommenter
@@ -154,7 +174,7 @@ function! s:show_documentation()
   elseif (coc#rpc#ready())
     call CocActionAsync('doHover')
   else
-    execute '!' . &keywordprg . " " . expand('<cword>')
+    execute '!' . &keywordprg . ' ' . expand('<cword>')
   endif
 endfunction
 
@@ -182,21 +202,27 @@ let g:lightline = {
       \   'linter_errors': 'lightline#ale#errors',
       \   'linter_ok': 'lightline#ale#ok',
       \ },
+      \ 'component_type': {
+      \   'linter_warnings': 'warning',
+      \   'linter_errors': 'error',
+      \   'linter_ok': 'ok'
+      \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
       \   'currentfunction': 'CocCurrentFunction'
       \ }
 \ }
 
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+augroup CocInstall
+  autocmd!
+  autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
+augroup END
 
 " Rust
 
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
 
 " vim-test
-let test#strategy = "dispatch"
+let test#strategy = 'dispatch'
 
 nmap <leader>tn :TestNearest<CR>
 nmap <leader>tf :TestFile<CR>
@@ -204,5 +230,5 @@ nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 nmap <leader>tg :TestVisit<CR>
 
-
-
+execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
+execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
