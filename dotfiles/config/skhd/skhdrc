@@ -83,6 +83,9 @@ shift + cmd - k : yabai -m window --focus north
 shift + cmd - l : yabai -m window --focus east
 # alt - h : yabai -m window --focus west
 
+shift + cmd - r : yabai -m space --rotate 90
+
+
 ctrl - return : kitty --single-instance -d ~ &> /dev/null
 
 # swap managed window
@@ -120,6 +123,8 @@ ctrl + cmd - d : yabai -m space --destroy
 # send window to desktop and follow focus
 ctrl + alt - h : yabai -m window --space prev; yabai -m space --focus prev
 ctrl + alt - l : yabai -m window --space next; yabai -m space --focus next
+
+# Focus on next space
 ctrl + cmd - h : yabai -m space --focus prev
 ctrl + cmd - l : yabai -m space --focus next
 
