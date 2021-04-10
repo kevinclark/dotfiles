@@ -31,3 +31,7 @@ brew "universal-ctags", args: ['HEAD']
 # wm
 brew "yabai"
 brew "skhd"
+
+
+# General apps
+cask "signal"
