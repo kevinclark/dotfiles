@@ -5,6 +5,9 @@
   "python.linting.flake8Enabled": false,
   "python.linting.pylintPath": "/usr/local/bin/pylint",
 
+  "rust-analyzer.procMacro.enable": true,
+  "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+
   "diagnostic.displayByAle": true,
 
   "diagnostic.errorSign": "❌",
