@@ -1,6 +1,6 @@
 scriptencoding utf-8
 
-let g:ale_linters = {'rust': ['analyzer'], 'vim': ['vint']}
+let g:ale_linters = {'rust': ['analyzer'], 'vim': ['vint'], 'ruby': ['rubocop']}
 let g:rustfmt_autosave = 1
 let g:rustfmt_options = '--config max_width=80'
 
@@ -9,15 +9,18 @@ let g:ale_rust_cargo_check_tests = 1
 let g:ale_rust_cargo_use_check = 1
 let g:ale_disable_lsp = 1
 
+"set scrolloff=9999
+
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 
 let g:ale_floating_preview = 1
-let g:ale_hover_to_preview = 0
-let g:ale_hover_to_floating_preview = 0
-let g:ale_detail_to_floating_preview = 0
-let g:ale_close_preview_on_insert = 0
-let g:ale_cursor_detail = 0
+let g:ale_hover_to_floating_preview = 1
+let g:ale_detail_to_floating_preview = 1
+let g:ale_cursor_detail = 1
+let g:ale_hover_cursor = 1
+let g:ale_close_preview_on_insert = 1
+
 
 let g:lightline#ale#indicator_checking = '⏳'
 let g:lightline#ale#indicator_infos = 'ℹ'
@@ -58,8 +61,10 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
 Plug 'neoclide/coc.nvim'
-Plug 'dense-analysis/ale', { 'dir': '~/code/ale' }
+Plug 'kevinclark/ale', { 'dir': '~/code/ale' }
 Plug 'sheerun/vim-polyglot'
+
+Plug 'junegunn/vader.vim'
 
 call plug#end()
 
