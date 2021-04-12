@@ -9,7 +9,7 @@ let g:ale_rust_cargo_check_tests = 1
 let g:ale_rust_cargo_use_check = 1
 let g:ale_disable_lsp = 1
 
-"set scrolloff=9999
+set scrolloff=9999
 
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
@@ -61,7 +61,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
 Plug 'neoclide/coc.nvim'
-Plug 'kevinclark/ale', { 'dir': '~/code/ale' }
+Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'junegunn/vader.vim'
