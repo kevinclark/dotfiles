@@ -7,6 +7,7 @@
 
   "rust-analyzer.procMacro.enable": true,
   "rust-analyzer.cargo.loadOutDirsFromCheck": true,
+  "rust-analyzer.cargo.allFeatures": true,
 
   "diagnostic.displayByAle": true,
 
