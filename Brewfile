@@ -21,6 +21,8 @@ brew "ccls"
 brew "ninja"
 brew "hyperfine"
 brew "lsusb"
+brew "ruby-install"
+brew "chruby"
 
 brew "vint"
 brew "shellcheck"
