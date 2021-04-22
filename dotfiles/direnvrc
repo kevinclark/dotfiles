@@ -26,3 +26,33 @@ use_chruby()
   chruby "${version}"
 }
 
+read_version_file()
+{
+  local file
+  file="$(find_up_ "${@}")"
+
+  [[ -z "${file}" ]] && return
+
+  watch_file "${file}"
+  ruby -e "puts ARGF.readline" 2> /dev/null "${file}"
+}
+
+find_up_()
+{
+  (
+    while true; do
+      for v in "${@}"; do
+        if [[ -f "${v}" ]]; then
+          echo "${PWD}/${v}"
+          return 0
+        fi
+      done
+
+      if [[ "${PWD}" == / ]] || [[ "${PWD}" == // ]]; then
+        return 1
+      fi
+
+      cd ..
+    done
+  )
+}
