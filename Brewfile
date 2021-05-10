@@ -23,6 +23,8 @@ brew "hyperfine"
 brew "lsusb"
 brew "ruby-install"
 brew "chruby"
+brew "gpg"
+cask "gpg-suite"
 
 brew "vint"
 brew "shellcheck"
