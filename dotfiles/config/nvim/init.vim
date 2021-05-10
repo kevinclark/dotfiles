@@ -233,8 +233,9 @@ nmap <leader>tl :TestLast<CR>
 nmap <leader>tg :TestVisit<CR>
 
 let test#strategy = 'dispatch'
-let test#ruby#minitest#executable = 'ruby -Itest'
+let g:dispatch_compilers = {'bundle exec': ''}
 let test#rust#cargotest#options = '--all-features'
+
 
 execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
 execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
