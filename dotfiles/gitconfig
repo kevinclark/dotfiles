@@ -6,6 +6,7 @@
 [user]
 	name = Kevin Clark
 	email = kevin.clark@gmail.com
+	signingkey = DBD7BC1B
 
 [alias]
 	a = add
@@ -29,3 +30,5 @@
   defaultBranch = main
 [pull]
 	ff = only
+[commit]
+	gpgsign = true
