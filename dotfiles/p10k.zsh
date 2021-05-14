@@ -69,6 +69,7 @@
     # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
     # rbenv                 # ruby version from rbenv (https://github.com/rbenv/rbenv)
     # rvm                   # ruby version from rvm (https://rvm.io)
+    chruby
     # fvm                   # flutter version management (https://github.com/leoafarias/fvm)
     # luaenv                # lua version from luaenv (https://github.com/cehoffman/luaenv)
     # jenv                  # java version from jenv (https://github.com/jenv/jenv)
@@ -98,7 +99,7 @@
     # todo                  # todo items (https://github.com/todotxt/todo.txt-cli)
     # timewarrior           # timewarrior tracking status (https://timewarrior.net/)
     # taskwarrior           # taskwarrior task count (https://taskwarrior.org/)
-    time                    # current time
+    # time                  # current time
     # =========================[ Line #2 ]=========================
     newline
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -518,10 +519,10 @@
 
   #######################[ direnv: direnv status (https://direnv.net/) ]########################
   # Direnv color.
-  # typeset -g POWERLEVEL9K_DIRENV_FOREGROUND=3
-  # typeset -g POWERLEVEL9K_DIRENV_BACKGROUND=0
+  typeset -g POWERLEVEL9K_DIRENV_FOREGROUND=3
+  typeset -g POWERLEVEL9K_DIRENV_BACKGROUND=0
   # Custom icon.
-  # typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
+  typeset -g POWERLEVEL9K_DIRENV_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
   ###############[ asdf: asdf version manager (https://github.com/asdf-vm/asdf) ]###############
   # Default asdf color. Only used to display tools for which there is no color override (see below).
@@ -1054,6 +1055,9 @@
   typeset -g POWERLEVEL9K_RVM_SHOW_PREFIX=false
   # Custom icon.
   # typeset -g POWERLEVEL9K_RVM_VISUAL_IDENTIFIER_EXPANSION='⭐'
+
+  ##########[ chruby ] ########
+  POWERLEVEL9K_CHRUBY_SHOW_ENGINE=false
 
   ###########[ fvm: flutter version management (https://github.com/leoafarias/fvm) ]############
   # Fvm color.
