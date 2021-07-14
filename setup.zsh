@@ -4,10 +4,12 @@ set -e
 
 ROOT=${0:a:h}
 
+echo "### Syncing $ROOT/Brewfile\n"
 # Install packages
 brew bundle --file $ROOT/Brewfile
 
 # ZSH install
+echo "\n### Updating oh-my-zsh plugins\n"
 
 if ! [[ -d ~/.oh-my-zsh ]]; then
   RUNZSH=no sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -26,6 +28,8 @@ plugins=(
   fzf-tab Aloxaf/fzf-tab
 )
 
+echo "\n### Updating zsh plugins\n"
+
 for name gh in $plugins; do
   plugin_dir=$OMZ_PLUGINS_DIR/$name
   if ! [[ -d $plugin_dir ]]; then
@@ -35,6 +39,13 @@ done
 
 # tmux - grab tpm!
 
+echo "\n### Updating asdf plugins\n"
+
+# asdf
+asdf plugin-add direnv && asdf install direnv latest && asdf global direnv latest
+
+
+echo "\n### Placing dotfiles\n"
 
 # Place actual dotfiles
 for f in `ls $ROOT/dotfiles`; do

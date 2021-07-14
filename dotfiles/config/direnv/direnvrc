@@ -56,3 +56,5 @@ find_up_()
     done
   )
 }
+
+source "$(asdf direnv hook asdf)"

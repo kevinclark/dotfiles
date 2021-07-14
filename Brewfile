@@ -3,6 +3,7 @@ cask "kitty"
 brew "autojump"
 brew "vivid"
 brew "direnv"
+brew "asdf"
 brew "coreutils" # For gls
 brew "httpie"
 brew "jq"
@@ -31,6 +32,9 @@ brew "shellcheck"
 
 tap "universal-ctags/universal-ctags"
 brew "universal-ctags", args: ['HEAD']
+
+# lichess stack
+brew "sbt"
 
 # wm
 brew "yabai"
