@@ -128,7 +128,7 @@ export LC_ALL=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 source $HOME/.cargo/env
-export PATH=~/bin:~/Library/Python/3.7/bin:$PATH
+export PATH=~/bin:~/Library/Python/3.7/bin:/usr/local/sbin:$PATH
 
 export LS_COLORS=$(vivid generate solarized-dark)
 
