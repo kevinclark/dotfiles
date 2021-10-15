@@ -35,6 +35,7 @@ brew "universal-ctags", args: ['HEAD']
 
 # lichess stack
 brew "sbt"
+brew "scalacenter/bloop/bloop"
 
 # wm
 brew "yabai"

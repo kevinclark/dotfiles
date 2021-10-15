@@ -239,3 +239,13 @@ let test#rust#cargotest#options = '--all-features'
 
 execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
 execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
+
+" Help Vim recognize *.sbt and *.sc as Scala files
+au BufRead,BufNewFile *.sbt,*.sc set filetype=scala
+
+" You will have a bad experience with diagnostic messages with the default 4000.
+set updatetime=300
+
+
+
+
