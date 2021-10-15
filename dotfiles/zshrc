@@ -131,6 +131,7 @@ source $HOME/.cargo/env
 export PATH=~/bin:~/Library/Python/3.7/bin:/usr/local/sbin:$PATH
 
 export LS_COLORS=$(vivid generate solarized-dark)
+export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
 export JAVA_HOME=/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home
 

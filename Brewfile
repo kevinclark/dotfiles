@@ -5,6 +5,7 @@ brew "vivid"
 brew "direnv"
 brew "asdf"
 brew "coreutils" # For gls
+brew "less"
 brew "httpie"
 brew "jq"
 brew "exa"
