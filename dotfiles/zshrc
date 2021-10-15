@@ -93,7 +93,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf autojump bundler cargo direnv docker fzf git op ssh-agent tmux zsh_reload zsh-syntax-highlighting)
+plugins=(asdf autojump bundler cargo direnv docker fzf git op ssh-agent tmux zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
