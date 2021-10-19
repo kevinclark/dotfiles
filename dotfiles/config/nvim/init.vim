@@ -50,6 +50,7 @@ Plug 'maximbaz/lightline-ale'
 
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'jremmen/vim-ripgrep'
 
 Plug 'vim-test/vim-test'
 Plug 'dhruvasagar/vim-zoom'
@@ -126,6 +127,7 @@ nnoremap <leader>ez :split ~/.zshrc<CR>
 nnoremap <leader>fl :Lines<CR>
 nnoremap <leader>fi :Files<CR>
 nnoremap <leader><leader> :GFiles<CR>
+nnoremap <leader>g :Rg<CR>
 
 " " Copy to clipboard
 vnoremap  <leader>y  "+y
@@ -249,7 +251,10 @@ execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
 execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
 
 " Help Vim recognize *.sbt and *.sc as Scala files
-au BufRead,BufNewFile *.sbt,*.sc set filetype=scala
+augroup ScalaFileRecognition
+  au BufRead,BufNewFile *.sbt,*.sc set filetype=scala
+augroup END
+
 
 " You will have a bad experience with diagnostic messages with the default 4000.
 set updatetime=300
