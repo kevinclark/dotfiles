@@ -137,9 +137,20 @@ export JAVA_HOME=/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/H
 
 alias go='git checkout'
 alias irc='ssh glu.ttono.us'
+
 alias ls='gls --color'
 alias la='ls -a'
 alias ll='ls -alF'
+
+if [ "$(command -v exa)" ]; then
+    unalias -m 'll'
+    unalias -m 'l'
+    unalias -m 'la'
+    unalias -m 'ls'
+    alias ls='exa -G  --color auto --icons -a -s type'
+    alias ll='exa -l --color always --icons -a -s type'
+fi
+
 alias vim='nvim'
 alias view='nvim -m'
 alias sigrok='~/bin/sigrok-cli.app/Contents/MacOS/sigrok-cli'
