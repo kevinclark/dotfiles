@@ -10,6 +10,7 @@ brew "httpie"
 brew "jq"
 brew "exa"
 brew "fd"
+brew "git-delta"
 
 cask "1password-cli"
 
