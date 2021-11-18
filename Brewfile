@@ -35,10 +35,6 @@ brew "shellcheck"
 tap "universal-ctags/universal-ctags"
 brew "universal-ctags", args: ['HEAD']
 
-# lichess stack
-brew "sbt"
-brew "scalacenter/bloop/bloop"
-
 # wm
 brew "yabai"
 brew "skhd"
