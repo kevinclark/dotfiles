@@ -60,6 +60,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-surround'
 
+Plug 'Iron-E/rust.vim', {'branch': 'feature/struct-definition-identifiers'}
 Plug 'neoclide/coc.nvim'
 Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
@@ -67,6 +68,16 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/vader.vim'
 
 call plug#end()
+
+command! EchoHlGroup echo "Highlight Group: " . synIDattr(
+\	synID(line("."), col("."), 1), "name"
+\) | echo 'Namespace: ' . synIDattr(
+\	synID(line("."), col("."), 0), "name"
+\) | echo "Linked to: " . synIDattr(
+\	synIDtrans(synID(
+\		line("."), col("."), 1
+\	)), "name"
+\)
 
 """
 """ General settings
