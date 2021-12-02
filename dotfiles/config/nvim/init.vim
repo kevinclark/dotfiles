@@ -1,6 +1,6 @@
 scriptencoding utf-8
 
-let g:ale_linters = {'rust': ['analyzer'], 'vim': ['vint'], 'ruby': ['rubocop']}
+let g:ale_linters = {'rust': ['analyzer', 'cargo'], 'vim': ['vint'], 'ruby': ['rubocop']}
 let g:rustfmt_autosave = 1
 
 let g:ale_rust_cargo_use_clippy = 1
