@@ -35,6 +35,7 @@ let g:lightline#ale#indicator_ok = '✔️'
 call plug#begin('~/.vim/plugged')
 
 Plug 'lifepillar/vim-solarized8'
+Plug 'Iron-E/nvim-soluarized'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
@@ -87,7 +88,17 @@ syntax on
 filetype plugin indent on
 
 set termguicolors
-colorscheme solarized8
+
+augroup Highlite
+	hi link rustNoise Normal
+	hi link rustQuestionMark Special
+	hi link rustAssert rustMacro
+	hi link rustModPathSep Normal
+
+	autocmd ColorScheme soluarized hi! rustMacro guifg=#d33682 guibg=NONE
+augroup end
+
+colorscheme soluarized
 set background=dark
 
 " Set leader
