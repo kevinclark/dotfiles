@@ -131,13 +131,16 @@ export LC_ALL=en_US.UTF-8
 #
 source $HOME/.cargo/env
 export PATH=~/bin:~/Library/Python/3.7/bin:/usr/local/sbin:$PATH
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 
 export LS_COLORS=$(vivid generate solarized-dark)
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
 export JAVA_HOME=/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home
 
-alias go='git checkout'
 alias irc='ssh glu.ttono.us'
 
 alias ls='gls --color'
