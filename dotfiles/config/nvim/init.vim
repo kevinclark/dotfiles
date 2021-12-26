@@ -54,6 +54,7 @@ Plug 'maximbaz/lightline-ale'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'jremmen/vim-ripgrep'
+Plug 'nanotee/zoxide.vim'
 
 Plug 'vim-test/vim-test'
 Plug 'dhruvasagar/vim-zoom'
