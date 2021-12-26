@@ -11,6 +11,7 @@ brew "jq"
 brew "exa"
 brew "fd"
 brew "git-delta"
+brew "zoxide"
 
 cask "1password-cli"
 

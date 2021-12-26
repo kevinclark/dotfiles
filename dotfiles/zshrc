@@ -82,9 +82,6 @@ if (( ! ${fpath[(I)/usr/local/share/zsh-completions]} )); then
   FPATH=/usr/local/share/zsh-completions:$FPATH
 fi
 
-# Otherwise autojump complains
-unsetopt BG_NICE
-
 # Faster response time.
 KEYTIMEOUT=1
 
@@ -93,7 +90,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump bundler cargo direnv docker fzf git op ssh-agent tmux zsh-syntax-highlighting)
+plugins=(bundler cargo direnv docker fzf git op ssh-agent tmux zsh-syntax-highlighting zoxide)
 
 source $(brew --prefix asdf)/libexec/asdf.sh
 
