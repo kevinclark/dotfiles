@@ -44,6 +44,11 @@ echo "\n### Updating asdf plugins\n"
 # asdf
 asdf plugin-add direnv && asdf install direnv latest && asdf global direnv latest
 
+echo "\n### Installing global python packages\n"
+
+if ! pip3 freeze --user | grep pynvim > /dev/null; then
+  pip3 install --user pynvim
+fi
 
 echo "\n### Placing dotfiles\n"
 

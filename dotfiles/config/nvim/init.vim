@@ -57,6 +57,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'nanotee/zoxide.vim'
 
 Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 Plug 'dhruvasagar/vim-zoom'
 
 Plug 'tpope/vim-fugitive'
@@ -260,16 +261,24 @@ augroup END
 " Rust
 
 
-" vim-test
-nmap <leader>tn :TestNearest<CR>
-nmap <leader>tf :TestFile<CR>
+" vim-test / vim-ultest
+nmap <leader>tn :UltestNearest<CR>
+nmap <leader>tf :Ultest<CR>
 nmap <leader>ts :TestSuite<CR>
-nmap <leader>tl :TestLast<CR>
-nmap <leader>tg :TestVisit<CR>
+nmap <leader>tl :UltestLast<CR>
+nmap ]t <Plug>(ultest-next-fail)
+nmap [t <Plug>(ultest-prev-fail)
+
 
 let test#strategy = 'dispatch'
 let g:dispatch_compilers = {'bundle exec': ''}
 let test#rust#cargotest#options = '--all-features'
+
+augroup UltestRunner
+    au!
+    au BufWritePost * Ultest
+augroup END
+
 
 
 execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
