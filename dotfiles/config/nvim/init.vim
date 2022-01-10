@@ -267,9 +267,9 @@ nmap <leader>ts :TestSuite<CR>
 nmap <leader>tl :TestLast<CR>
 nmap <leader>tg :TestVisit<CR>
 
-let test#strategy = 'dispatch'
 let g:dispatch_compilers = {'bundle exec': ''}
 let test#rust#cargotest#options = '--all-features'
+let test#strategy = 'dispatch'
 
 
 execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
