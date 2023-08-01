@@ -92,7 +92,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler cargo direnv docker fzf git op ssh-agent tmux zsh-syntax-highlighting)
+plugins=(bundler direnv docker fzf git gpg-agent op rust ssh-agent tmux zsh-syntax-highlighting)
 
 source $(brew --prefix asdf)/libexec/asdf.sh
 
@@ -138,7 +138,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export LS_COLORS=$(vivid generate solarized-dark)
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
-export JAVA_HOME=/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home
 
 alias irc='ssh glu.ttono.us'
 

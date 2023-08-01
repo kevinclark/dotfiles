@@ -1,6 +1,6 @@
 {
   "python.pythonPath": "python",
-  "python.jediPath": "/usr/local/lib/python3.9/site-packages/",
+  "python.jediPath": "/usr/local/lib/python3.11/site-packages/",
   "python.linting.pylintEnabled": true,
   "python.linting.flake8Enabled": false,
   "python.linting.pylintPath": "/usr/local/bin/pylint",
