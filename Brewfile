@@ -47,6 +47,8 @@ cask "blender"
 cask "zoom"
 
 cask "prusaslicer"
+cask "superslicer"
+cask "orca"
 
 # Cross compile for raspberry pi and rust
 brew "arm-linux-gnueabihf-binutils"
