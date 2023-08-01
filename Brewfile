@@ -60,3 +60,6 @@ brew "minicom"
 
 # For embedded graphics simulator
 brew "sdl2"
+
+# Kids dev
+brew "python-tk"
