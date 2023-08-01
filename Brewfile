@@ -47,3 +47,14 @@ cask "blender"
 cask "zoom"
 
 cask "prusaslicer"
+
+# Cross compile for raspberry pi and rust
+brew "arm-linux-gnueabihf-binutils"
+
+# micro:bit support for rust
+tap "ArmMbed/homebrew-formulae"
+brew "arm-none-eabi-gcc"
+brew "minicom"
+
+# For embedded graphics simulator
+brew "sdl2"
