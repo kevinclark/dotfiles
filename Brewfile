@@ -44,4 +44,6 @@ brew "skhd"
 # General apps
 cask "signal"
 cask "blender"
+cask "zoom"
+
 cask "prusaslicer"
