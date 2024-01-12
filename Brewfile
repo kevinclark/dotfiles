@@ -32,6 +32,10 @@ brew "gpg"
 cask "gpg-suite"
 cask "ngrok"
 
+# For AdvantageKit
+brew "bazel"
+cask "visual-studio-code"
+
 brew "vint"
 brew "shellcheck"
 
