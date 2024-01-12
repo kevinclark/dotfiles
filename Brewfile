@@ -14,6 +14,7 @@ brew "git-delta"
 brew "zoxide"
 
 cask "1password-cli"
+cask "slack-cli"
 
 # general dev
 brew "neovim"
@@ -29,6 +30,7 @@ brew "ruby-install"
 brew "chruby"
 brew "gpg"
 cask "gpg-suite"
+cask "ngrok"
 
 brew "vint"
 brew "shellcheck"
