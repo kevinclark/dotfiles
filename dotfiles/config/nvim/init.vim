@@ -13,8 +13,8 @@ let g:ale_disable_lsp = 1
 
 set scrolloff=9999
 
-let g:ale_sign_error = ''
-let g:ale_sign_warning = ''
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
 
 let g:ale_floating_preview = 1
 let g:ale_hover_to_floating_preview = 1
@@ -37,8 +37,7 @@ let g:lightline#ale#indicator_ok = '✔️'
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'lifepillar/vim-solarized8'
-Plug 'Iron-E/nvim-soluarized'
+Plug 'maxmx03/solarized.nvim'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'edkolev/tmuxline.vim'
@@ -72,6 +71,8 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'junegunn/vader.vim'
 
+Plug '~/code/gcode.vim'
+
 call plug#end()
 
 command! EchoHlGroup echo "Highlight Group: " . synIDattr(
@@ -98,11 +99,9 @@ augroup Highlite
 	hi link rustQuestionMark Special
 	hi link rustAssert rustMacro
 	hi link rustModPathSep Normal
-
-	autocmd ColorScheme soluarized hi! rustMacro guifg=#d33682 guibg=NONE
 augroup end
 
-colorscheme soluarized
+colorscheme solarized
 set background=dark
 
 " Set leader
@@ -287,12 +286,17 @@ let test#rust#cargotest#options = '--all-features'
 let test#strategy = 'dispatch'
 
 
-execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
-execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
+"execute 'highlight ALEWarningSign guifg=' . g:terminal_color_2
+"execute 'highlight ALEErrorSign guifg=' . g:terminal_color_1
 
 " Help Vim recognize *.sbt and *.sc as Scala files
 augroup ScalaFileRecognition
   au BufRead,BufNewFile *.sbt,*.sc set filetype=scala
+augroup END
+
+augroup GCodeRecognition
+	autocmd BufNewFile,BufRead *.prg set filetype=gcode
+	autocmd BufNewFile,BufRead *.mmg set filetype=gcode
 augroup END
 
 

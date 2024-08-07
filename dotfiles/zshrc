@@ -84,6 +84,8 @@ if (( ! ${fpath[(I)/usr/local/share/zsh-completions]} )); then
   FPATH=/usr/local/share/zsh-completions:$FPATH
 fi
 
+FPATH=~/.zfunc:$FPATH
+
 # Faster response time.
 KEYTIMEOUT=1
 
@@ -138,7 +140,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 export LS_COLORS=$(vivid generate solarized-dark)
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
-export JAVA_HOME=/usr/local/Cellar/openjdk/17/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=/usr/local/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home
 
 alias irc='ssh glu.ttono.us'
 

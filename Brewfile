@@ -31,10 +31,8 @@ brew "chruby"
 brew "gpg"
 cask "gpg-suite"
 cask "ngrok"
-
-# For AdvantageKit
-brew "bazel"
-cask "visual-studio-code"
+tap "probe-rs/probe-rs"
+brew "probe-rs"
 
 brew "vint"
 brew "shellcheck"
@@ -69,3 +67,6 @@ brew "sdl2"
 
 # Kids dev
 brew "python-tk"
+
+# FRC 2024
+brew "openjdk@17"
