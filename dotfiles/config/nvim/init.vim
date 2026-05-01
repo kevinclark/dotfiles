@@ -69,7 +69,7 @@ else
 	Plug 'tpope/vim-surround'
 
 	Plug 'Iron-E/rust.vim', {'branch': 'feature/struct-definition-identifiers'}
-	Plug 'neoclide/coc.nvim'
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	Plug 'dense-analysis/ale'
 	Plug 'sheerun/vim-polyglot'
 

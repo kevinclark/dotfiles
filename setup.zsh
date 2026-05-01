@@ -42,7 +42,7 @@ done
 echo "\n### Updating asdf plugins\n"
 
 # asdf
-asdf plugin-add direnv && asdf install direnv latest && asdf global direnv latest
+asdf plugin add direnv && asdf install direnv latest && asdf set --home direnv latest
 
 
 echo "\n### Placing dotfiles\n"

@@ -94,9 +94,9 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler direnv docker fzf git gpg-agent op rust ssh-agent tmux zsh-syntax-highlighting)
+plugins=(bundler direnv docker fzf git gpg-agent op rust ssh-agent tmux zsh-syntax-highlighting asdf)
 
-source $(brew --prefix asdf)/libexec/asdf.sh
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,12 +130,13 @@ export LC_ALL=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source $HOME/.cargo/env
 export PATH=~/bin:~/Library/Python/3.9/bin:/usr/local/opt/python@3.8/bin:/usr/local/sbin:$PATH
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+export SSH_SK_PROVIDER=/usr/lib/ssh-keychain.dylib
+zstyle :omz:plugins:ssh-agent ssh-add-args -K
 
 export LS_COLORS=$(vivid generate solarized-dark)
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
@@ -148,13 +149,13 @@ alias ls='gls --color'
 alias la='ls -a'
 alias ll='ls -alF'
 
-if [ "$(command -v exa)" ]; then
+if [ "$(command -v eza)" ]; then
     unalias -m 'll'
     unalias -m 'l'
     unalias -m 'la'
     unalias -m 'ls'
-    alias ls='exa -G  --color auto --icons -a -s type'
-    alias ll='exa -l --color always --icons -a -s type'
+    alias ls='eza -G  --color auto --icons -a -s type'
+    alias ll='eza -l --color always --icons -a -s type'
 fi
 
 alias vim='nvim'
