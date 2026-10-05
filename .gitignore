@@ -5,3 +5,14 @@ dotfiles/config/tmux/plugins/
 dotfiles/config/nvim/.netrwhist
 Brewfile.lock.json
 dotfiles/config/op
+dotfiles/config/piedmontmakers/
+
+# Default-deny: config dirs often hold tokens. Allowlist what should be public.
+dotfiles/config/*
+!dotfiles/config/coc/
+!dotfiles/config/direnv/
+!dotfiles/config/kitty/
+!dotfiles/config/nvim/
+!dotfiles/config/skhd/
+!dotfiles/config/tmux/
+!dotfiles/config/yabai/
