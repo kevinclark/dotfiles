@@ -97,7 +97,7 @@ Kevin's go, 10-09: cut items 1 and 2; keep item 3 (ExpressVPN); WireGuard remove
      `Application Scripts/*wireguard*` folders (empty).
    - Refused with `Operation not permitted` (macOS protects sandboxed app containers from a non-Finder process):
      `Containers/com.wireguard.macos{,.login-item-helper,.network-extension}`. Kevin dragged these in Finder into
-     `~/Backups/2026-10-09-wireguard/Containers/` (~14:45), and also moved a `com.wireguard.macos.plist` there
+     `~/Backups/2026-10-09-wireguard/Containers/` (between 14:31 and 14:34), and also moved a `com.wireguard.macos.plist` there
      (mtime 14:01, the minute of WireGuard's last use).
    - Read-back: no `*wireguard*` left under `~/Library/{Containers,Group Containers,Application Scripts,Preferences,LaunchAgents}`;
      backup is 1.1 MB. Only the 2 BTM records remain (see 3).
