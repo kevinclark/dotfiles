@@ -92,3 +92,9 @@ Kevin's go, 10-09: cut items 1 and 2; keep item 3 (ExpressVPN); WireGuard remove
    - Data folders, not touched (deleting needs a named go): `~/Library/Containers/com.wireguard.macos{,.login-item-helper,.network-extension}`,
      `~/Library/Group Containers/L82V4Y2P3C.group.com.wireguard.macos`, and 4 matching `~/Library/Application Scripts/` folders.
      They may hold the old tunnel configs and keys.
+4. WireGuard data folders (Kevin's go, 10-09 ~14:31), moved to `~/Backups/2026-10-09-wireguard/`, nothing deleted:
+   - Moved: `Group Containers/L82V4Y2P3C.group.com.wireguard.macos` (1.0 MB, mostly `tunnel-log.bin`), plus the 4
+     `Application Scripts/*wireguard*` folders (empty).
+   - Refused with `Operation not permitted` (macOS protects sandboxed app containers from a non-Finder process):
+     `Containers/com.wireguard.macos{,.login-item-helper,.network-extension}`. Kevin is to drag these in Finder into
+     `~/Backups/2026-10-09-wireguard/Containers/`.
