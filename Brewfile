@@ -36,3 +36,4 @@ cask "nikitabobko/tap/aerospace"
 
 # General apps
 cask "zoom"
+cask "tailscale-app"
