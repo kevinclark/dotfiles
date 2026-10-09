@@ -99,6 +99,7 @@ plugins=(bundler direnv docker fzf git gpg-agent op rust ssh-agent tmux zsh-synt
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+[[ -n $CLAUDECODE ]] && unalias ls 2>/dev/null   # Claude Code shells get plain BSD ls, not the eza alias
 
 # User configuration
 
