@@ -74,3 +74,16 @@
     whitespace-error-style = "#280050" reverse
     zero-style = syntax
     syntax-theme = Nord
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://github.com/kevinclark"]
+	helper = 
+	helper = "!f(){ test \"$1\" = get || exit 0; echo username=kevinclark; echo \"password=$(/usr/bin/security find-generic-password -a kevinclark -s github-pat-kevinclark -w)\"; }; f"
+[url "https://github.com/kevinclark/"]
+	insteadOf = git@github.com:kevinclark/
+[url "git@github-makers:piedmontmakers/"]
+	insteadOf = git@github.com:piedmontmakers/
