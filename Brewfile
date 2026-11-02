@@ -1,6 +1,5 @@
 # Shell
 cask "kitty"
-brew "autojump"
 brew "vivid"
 brew "direnv"
 brew "asdf"
@@ -19,8 +18,7 @@ cask "1password-cli"
 brew "neovim"
 brew "ruby-install"
 brew "chruby"
-brew "gpg"
-cask "gpg-suite"
+brew "gh"
 
 brew "vint"
 brew "shellcheck"
@@ -31,9 +29,14 @@ tap "universal-ctags/universal-ctags"
 brew "universal-ctags", args: ['HEAD']
 
 # wm
-cask "nikitabobko/tap/aerospace"
+brew "asmvik/formulae/yabai"
+brew "asmvik/formulae/skhd"
 
 
 # General apps
 cask "zoom"
+cask "1password"
+cask "orion"
+cask "dropbox"
+cask "bambu-studio"
 cask "tailscale-app"

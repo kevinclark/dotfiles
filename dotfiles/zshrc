@@ -94,9 +94,19 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(bundler direnv docker fzf git gpg-agent op rust ssh-agent tmux zsh-syntax-highlighting asdf)
+plugins=(bundler direnv docker fzf git gpg-agent op rust tmux zsh-syntax-highlighting asdf eza)
 
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
+
+# SSH keys live in 1Password (Touch ID per request); no on-disk keys, no ssh-agent plugin.
+# Claude Code shells (CLAUDECODE=1) get no agent: a prompt nobody sees would stall their ssh ~60 s.
+[[ -z $CLAUDECODE ]] && export SSH_AUTH_SOCK="$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+zstyle ':omz:plugins:eza' 'dirs-first' yes
+zstyle ':omz:plugins:eza' 'git-status' yes
+zstyle ':omz:plugins:eza' 'header' yes
+zstyle ':omz:plugins:eza' 'icons' yes
+
 
 source $ZSH/oh-my-zsh.sh
 [[ -n $CLAUDECODE ]] && unalias ls 2>/dev/null   # Claude Code shells get plain BSD ls, not the eza alias
@@ -136,32 +146,16 @@ export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+# Use the key in the secure enclave`
 export SSH_SK_PROVIDER=/usr/lib/ssh-keychain.dylib
-zstyle :omz:plugins:ssh-agent ssh-add-args -K
 
 export LS_COLORS=$(vivid generate solarized-dark)
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
-export JAVA_HOME=/usr/local/Cellar/openjdk@17/17.0.9/libexec/openjdk.jdk/Contents/Home
-
 alias irc='ssh glu.ttono.us'
-
-alias ls='gls --color'
-alias la='ls -a'
-alias ll='ls -alF'
-
-if [ "$(command -v eza)" ]; then
-    unalias -m 'll'
-    unalias -m 'l'
-    unalias -m 'la'
-    unalias -m 'ls'
-    alias ls='eza -G  --color auto --icons -a -s type'
-    alias ll='eza -l --color always --icons -a -s type'
-fi
 
 alias vim='nvim'
 alias view='nvim -m'
-alias sigrok='~/bin/sigrok-cli.app/Contents/MacOS/sigrok-cli'
 
 # Only autocomplete targets from make
 zstyle ':completion:*:*:make:*' tag-order 'targets'
